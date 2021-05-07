@@ -1,0 +1,141 @@
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+  var compressorChart = new Object();
+  var compressorData = new Object();
+  var auxTable = new Object();
+  var ans_compressor = 0; // Previous compressor state
+  var display_cycles = 4; // Numer of cycles to display
+ 
+
+  google.charts.load("current", {packages:["timeline"]});
+  google.charts.load('current', {packages: ['corechart']});
+  google.charts.setOnLoadCallback(initCompressorChart);
+
+  count = 0;
+  
+    var from_time = [];
+    var to_time = [];
+
+    from_time[0] = parseInt(dev_date.getFullYear());
+    from_time[1] = parseInt(dev_date.getMonth() + 1);
+    from_time[2] = parseInt(dev_date.getDate());
+    from_time[3] = parseInt(dev_date.getHours());
+    from_time[4] = parseInt(dev_date.getMinutes());
+    from_time[5] = parseInt(dev_date.getSeconds());
+    
+    to_time[0] = parseInt(dev_date.getFullYear());
+    to_time[1] = parseInt(dev_date.getMonth() + 1);
+    to_time[2] = parseInt(dev_date.getDate());
+    to_time[3] = parseInt(dev_date.getHours());
+    to_time[4] = parseInt(dev_date.getMinutes());
+    to_time[5] = parseInt(dev_date.getSeconds());
+    
+  function updateCompressorTimeline(){
+    var i;
+    on_color = 'green';
+    off_color = 'orange';
+    colors_array = [];
+    
+    //Math.random() > 0.5 ? compressor = 1 : compressor = 0;  // Simulate power on|off cycles
+    
+    if(ans_compressor != compressor){
+        // Swap start and end compressor cycle
+        from_time[0] = to_time[0];
+        from_time[1] = to_time[1];
+        from_time[2] = to_time[2];
+        from_time[3] = to_time[3];
+        from_time[4] = to_time[4];
+        from_time[5] = to_time[5];
+        ans_compressor = compressor;
+    }
+    /*if(compressorData.getNumberOfRows() == display_cycles) { //Swap compressor status array
+        for(i = 0; i < (display_cycles-1); i++){
+          compressorData.setCell(i,0,compressorData.getValue(i+1,0));
+          compressorData.setCell(i,1,compressorData.getValue(i+1,1));
+          compressorData.setCell(i,2,compressorData.getValue(i+1,2));
+          compressorData.setCell(i,3,compressorData.getValue(i+1,3));
+        }
+        compressorData.removeRow(display_cycles-1); // Delete the last value 
+        if(compressor == 0)
+          compressorData.addRow([ '0','OFF', 
+                                    new Date(from_time[0], from_time[1], from_time[2], from_time[3], from_time[4], from_time[5]), 
+                                    new Date(to_time[0], to_time[1], to_time[2], to_time[3], to_time[4], to_time[5])
+                                ]);
+                                //compressorData.addRow([ '0','OFF', new Date(2017, 4, 18,12,10,count), new Date(2017, 4, 18, 12,10,count+5) ]);
+        else 
+          compressorData.addRow([ '0','ON', 
+                                    new Date(from_time[0], from_time[1], from_time[2], from_time[3], from_time[4], from_time[5]), 
+                                    new Date(to_time[0], to_time[1], to_time[2], to_time[3], to_time[4], to_time[5])
+                                ]);
+                                //compressorData.addRow([ '0','ON', new Date(2017, 4, 18,12,10,count), new Date(2017, 4, 18, 12,10,count+5) ]);
+    } */
+   // else{
+    
+        if(compressor == 0)
+            compressorData.addRow([ '0','OFF', 
+                                    new Date(from_time[0], from_time[1], from_time[2], from_time[3], from_time[4], from_time[5]), 
+                                    new Date(to_time[0], to_time[1], to_time[2], to_time[3], to_time[4], to_time[5])
+                                ]);
+            //compressorData.addRow([ '0','OFF', new Date(2017, 4, 18,12,10,count), new Date(2017, 4, 18, 12,10,count+5) ]);  
+        else 
+          compressorData.addRow([ '0','ON', 
+                                    new Date(from_time[0], from_time[1], from_time[2], from_time[3], from_time[4], from_time[5]), 
+                                    new Date(to_time[0], to_time[1], to_time[2], to_time[3], to_time[4], to_time[5])
+                                ]);
+            //compressorData.addRow([ '0','ON', new Date(2017, 4, 18,12,10,count), new Date(2017, 4, 18, 12,10,count+5) ]);   
+   // }
+    if(compressorData.getValue(0,1) == 'OFF' ){
+        for(i = 0; i < display_cycles; i += 2){
+          colors_array[i] = off_color;
+          colors_array[i+1] = on_color;
+        }
+        var options = {
+          colors: colors_array,
+        };
+    }
+    else {
+        for(i = 0; i < display_cycles; i += 2){
+          colors_array[i] = on_color;
+          colors_array[i+1] = off_color;
+        }
+        var options = {
+          colors: colors_array,
+        };
+    }
+    console.log("Compressor status = "+compressor); //+" "+ dev_date + " " + start_time[0], start_time[1],start_time[2], start_time[3], start_time[4], start_time[5]);
+    console.log(from_time);
+    console.log(to_time);
+    
+    //compressorChart.clearChart();
+    compressorChart.draw(compressorData, options);
+    //compressorData.removeRow(0);
+    count += 5;
+    
+    to_time[0] = parseInt(dev_date.getFullYear());
+    to_time[1] = parseInt(dev_date.getMonth() + 1);
+    to_time[2] = parseInt(dev_date.getDate());
+    to_time[3] = parseInt(dev_date.getHours());
+    to_time[4] = parseInt(dev_date.getMinutes());
+    to_time[5] = parseInt(dev_date.getSeconds());
+    return;
+  }
+  
+  function initCompressorChart(){
+    var container = document.getElementById('compressor_timeline');
+
+    compressorChart = new google.visualization.Timeline(container);
+    compressorData = new google.visualization.DataTable();
+    compressorData.addColumn({ type: 'string', id: 'Status' });
+    compressorData.addColumn({ type: 'string', id: 'Name' });
+    compressorData.addColumn({ type: 'date', id: 'Start' });
+    compressorData.addColumn({ type: 'date', id: 'End' });
+    compressorChart.draw(compressorData);
+    //compressorChart.clearChart();
+    //console.log(dev_date);
+    //console.log(compressorData.getNumberOfRows());
+    return;
+  }
+
+</script>
