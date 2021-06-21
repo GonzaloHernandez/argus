@@ -1,0 +1,68 @@
+[14-Jan-2021 20:10:51 UTC] PHP Notice:  Undefined variable: elapsed_time in /home/argusing/public_html/frozen2/ws/logger.php on line 69
+[14-Jan-2021 20:10:51 UTC] PHP Notice:  Undefined variable: elapsed_time in /home/argusing/public_html/frozen2/ws/logger.php on line 75
+[14-Jan-2021 20:10:54 UTC] PHP Notice:  Undefined variable: elapsed_time in /home/argusing/public_html/frozen2/ws/logger.php on line 69
+[14-Jan-2021 20:10:54 UTC] PHP Notice:  Undefined variable: elapsed_time in /home/argusing/public_html/frozen2/ws/logger.php on line 75
+[14-Jan-2021 20:15:51 UTC] PHP Parse error:  syntax error, unexpected 'catch' (T_CATCH) in /home/argusing/public_html/frozen2/ws/logger.php on line 90
+[14-Jan-2021 20:15:54 UTC] PHP Parse error:  syntax error, unexpected 'catch' (T_CATCH) in /home/argusing/public_html/frozen2/ws/logger.php on line 90
+[14-Jan-2021 20:16:50 UTC] PHP Parse error:  syntax error, unexpected 'catch' (T_CATCH) in /home/argusing/public_html/frozen2/ws/logger.php on line 91
+[14-Jan-2021 20:17:51 UTC] PHP Parse error:  syntax error, unexpected 'catch' (T_CATCH) in /home/argusing/public_html/frozen2/ws/logger.php on line 91
+[14-Jan-2021 20:22:51 UTC] PHP Notice:  Undefined variable: elapsed_time in /home/argusing/public_html/frozen2/ws/logger.php on line 69
+[14-Jan-2021 20:47:51 UTC] PHP Notice:  Undefined variable: counter_v in /home/argusing/public_html/frozen2/ws/logger.php on line 52
+[14-Jan-2021 20:48:50 UTC] PHP Notice:  Undefined variable: counter_v in /home/argusing/public_html/frozen2/ws/logger.php on line 52
+[14-Jan-2021 20:49:51 UTC] PHP Notice:  Undefined variable: counter_v in /home/argusing/public_html/frozen2/ws/logger.php on line 52
+[14-Jan-2021 20:50:51 UTC] PHP Notice:  Undefined variable: counter_v in /home/argusing/public_html/frozen2/ws/logger.php on line 52
+[14-Jan-2021 20:50:54 UTC] PHP Notice:  Undefined variable: counter_v in /home/argusing/public_html/frozen2/ws/logger.php on line 52
+[14-Jan-2021 20:51:51 UTC] PHP Notice:  Undefined variable: counter_v in /home/argusing/public_html/frozen2/ws/logger.php on line 52
+[14-Jan-2021 20:52:51 UTC] PHP Notice:  Undefined variable: counter_v in /home/argusing/public_html/frozen2/ws/logger.php on line 52
+[14-Jan-2021 20:53:51 UTC] PHP Notice:  Undefined variable: counter_v in /home/argusing/public_html/frozen2/ws/logger.php on line 52
+[20-May-2021 21:55:42 UTC] PHP Warning:  require_once(../code/common/connection.php): failed to open stream: No such file or directory in /home/argusing/public_html/frozen2/ws/reporter.php on line 12
+[20-May-2021 21:55:42 UTC] PHP Fatal error:  require_once(): Failed opening required '../code/common/connection.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/argusing/public_html/frozen2/ws/reporter.php on line 12
+[20-May-2021 21:56:30 UTC] PHP Warning:  require_once(../code/common/connection.php): failed to open stream: No such file or directory in /home/argusing/public_html/frozen2/ws/reporter.php on line 12
+[20-May-2021 21:56:30 UTC] PHP Fatal error:  require_once(): Failed opening required '../code/common/connection.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/argusing/public_html/frozen2/ws/reporter.php on line 12
+[20-May-2021 21:57:22 UTC] PHP Warning:  require_once(../code/common/connection.php): failed to open stream: No such file or directory in /home/argusing/public_html/frozen2/ws/reporter.php on line 12
+[20-May-2021 21:57:22 UTC] PHP Fatal error:  require_once(): Failed opening required '../code/common/connection.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/argusing/public_html/frozen2/ws/reporter.php on line 12
+[22-May-2021 00:41:54 UTC] PHP Notice:  Undefined variable: db in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[22-May-2021 00:41:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/argusing/public_html/frozen2/ws/reporter.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[22-May-2021 00:41:55 UTC] PHP Notice:  Undefined variable: db in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[22-May-2021 00:41:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/argusing/public_html/frozen2/ws/reporter.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[22-May-2021 00:41:56 UTC] PHP Notice:  Undefined variable: db in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[22-May-2021 00:41:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/argusing/public_html/frozen2/ws/reporter.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[22-May-2021 00:41:56 UTC] PHP Notice:  Undefined variable: db in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[22-May-2021 00:41:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/argusing/public_html/frozen2/ws/reporter.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[21-Jun-2021 19:05:34 UTC] PHP Notice:  Undefined variable: db in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[21-Jun-2021 19:05:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/argusing/public_html/frozen2/ws/reporter.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[21-Jun-2021 19:05:34 UTC] PHP Notice:  Undefined variable: db in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[21-Jun-2021 19:05:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/argusing/public_html/frozen2/ws/reporter.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[21-Jun-2021 19:05:34 UTC] PHP Notice:  Undefined variable: db in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[21-Jun-2021 19:05:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/argusing/public_html/frozen2/ws/reporter.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[21-Jun-2021 19:05:34 UTC] PHP Notice:  Undefined variable: db in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[21-Jun-2021 19:05:34 UTC] PHP Notice:  Undefined variable: db in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[21-Jun-2021 19:05:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/argusing/public_html/frozen2/ws/reporter.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
+[21-Jun-2021 19:05:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/argusing/public_html/frozen2/ws/reporter.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/argusing/public_html/frozen2/ws/reporter.php on line 22
